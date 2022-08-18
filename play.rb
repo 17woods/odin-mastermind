@@ -54,6 +54,7 @@ module Play
 
       break
     end
+
     loop do
       @@computer_guess = create_secret_code(rules, allowed_characters)
 
@@ -67,5 +68,13 @@ module Play
         break
       end
     end
+  end
+
+  def play_again?
+    puts "Do you want to play again? (y/n)"
+
+    @@input = gets.chomp.downcase
+
+    @@input == 'y'
   end
 end

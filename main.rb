@@ -19,6 +19,12 @@ class Main
       exit
 
     end
+
+    if play_again?
+      main_menu
+    else
+      exit
+    end
   end
 end
 
